@@ -94,9 +94,8 @@ class Classifier:
         """
 
         to_estimate = EstimationSet(data=news_articles, tokenizer=self._tokenizer).get_data()
-        batch_size = 256
         tokens = to_estimate[EstimationSet.COL_TOKENS]
-        estimations = self._model.predict(Classifier._as_array(tokens), batch_size=batch_size)
+        estimations = self._model.predict(Classifier._as_array(tokens), batch_size=256)
 
         return [float(p) for p in list(estimations[:, 1])]
 
