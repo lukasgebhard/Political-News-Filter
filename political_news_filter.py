@@ -25,7 +25,7 @@ _NONPOLITICAL_ARTICLE = '''Table tennis world cup 2025 takes place in South Kore
                         '''in the National Table Tennis League this year.'''
 
 
-def filter_news(news_articles, threshold=0.75):
+def filter_news(news_articles, threshold=0.5):
     """
     Filter out all news articles that do not cover policy topics.
 
@@ -33,6 +33,7 @@ def filter_news(news_articles, threshold=0.75):
         news_articles: A 1D NumPy array of news articles. A news article is the string concatenation of title,
             lead paragraph, and body.
         threshold: A value in [0, 1]. The higher the threshold, the more aggressive is the filter.
+            The evaluation statistics (see `README.md`) are based on a threshold of 0.5.
 
     # Returns
         The filtered list of news articles.
@@ -123,3 +124,4 @@ class EstimationSet:
 
 if __name__ == '__main__':
     doctest.testmod()
+    print('Hooray! Political News Filter is properly installed and ready to use.')
