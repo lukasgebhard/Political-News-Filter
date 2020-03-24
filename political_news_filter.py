@@ -24,6 +24,9 @@ _NONPOLITICAL_ARTICLE = '''Table tennis world cup 2025 takes place in South Kore
                         '''to the advantage of underdog Bob Bobby who has been playing outstanding matches ''' \
                         '''in the National Table Tennis League this year.'''
 
+# evaluation was performed with 0.5 as threshold, i.e., >0.5 -> political article, else non-political article
+THRESHOLD_PROB = 0.5
+
 
 def filter_news(news_articles, threshold=0.75):
     """

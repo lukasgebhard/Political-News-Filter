@@ -3,11 +3,19 @@
 TODO
 
 ## Requirements
-
+- Git LFS installed and setup for your user's account
 - Python 3.6+
 - Pandas 0.24.1+
 - NumPy 1.18.1+
 - Keras 2.3.1+
+
+Terminal friends may install requirements using:
+```
+conda create --yes -n polnewsfilter python=3.7
+conda activate polnewsfilter 
+conda install --yes pandas
+conda install --yes -c conda-forge keras
+```
 
 ## Setup
 
