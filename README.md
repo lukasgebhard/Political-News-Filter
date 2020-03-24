@@ -90,7 +90,7 @@ The classifier is based on a [model by Heng Zheng](https://www.kaggle.com/hengzh
 
 I created a labeled set of 0.57M news articles, selected from:
 
-- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/)
+- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/) (extracted using [news-please](https://github.com/fhamborg/news-please))
 - [The HuffPost dataset](https://www.kaggle.com/rmisra/news-category-dataset)
 - [The BBC dataset](http://mlg.ucd.ie/datasets/bbc.html)
 
