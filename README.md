@@ -82,6 +82,28 @@ True
 
 Please read the docstrings for further information.
 
+## Runtime Performance
+
+Below are some benchmarks on a notebook with 6 CPU cores @ 2.6 GHz, a GPU with 4 GB GRAM and CUDA capability 7.5, 32 GB RAM, and a PCIe SSD drive:
+
+<table>
+  <tr>
+    <td></td>
+    <td>On CPU</td>
+    <td>On GPU</td>
+  </tr>
+  <tr>
+    <td>One-time Initialization</td>
+    <td>30 sec</td>
+    <td>15 sec</td>
+   </tr>
+   <tr>
+     <td>Classification of 1,000 articles</td>
+     <td>1.8 sec</td>
+     <td>1.3 sec</td>
+   </tr>
+</table>
+
 ## Architecture
 
 The classifier is based on a [model by Heng Zheng](https://www.kaggle.com/hengzheng/news-category-classifier-val-acc-0-65) submitted to Kaggle under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license. It is a convolutional neural network with a 100-dimensional [GloVe](https://www.aclweb.org/anthology/D14-1162/) embedding layer, three convolutional layers, each one followed by a ReLu layer and a pooling layer, and finally a softmax output layer. During training, a cross-entropy loss function is minimized using dropout regularization.
