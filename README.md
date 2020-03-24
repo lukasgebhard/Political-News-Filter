@@ -86,7 +86,7 @@ Please read the docstrings for further information.
 
 The classifier is based on a [model by Heng Zheng](https://www.kaggle.com/hengzheng/news-category-classifier-val-acc-0-65) submitted to Kaggle under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license. It is a convolutional neural network with a 100-dimensional [GloVe](https://www.aclweb.org/anthology/D14-1162/) embedding layer, three convolutional layers, each one followed by a ReLu layer and a pooling layer, and finally a softmax output layer. During training, a cross-entropy loss function is minimized using dropout regularization.
 
-## Model Fitting
+## Training & Evaluation
 
 I created a labeled set of 0.57M news articles, selected from:
 
