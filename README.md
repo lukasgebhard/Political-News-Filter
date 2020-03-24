@@ -86,23 +86,10 @@ Please read the docstrings for further information.
 
 Below are some benchmarks on a notebook with 6 CPU cores @ 2.6 GHz, a GPU with 4 GB GRAM and CUDA capability 7.5, 32 GB RAM, and a PCIe SSD drive:
 
-<table>
-  <tr>
-    <td></td>
-    <td>On CPU</td>
-    <td>On GPU</td>
-  </tr>
-  <tr>
-    <td>One-time Initialization</td>
-    <td>30 sec</td>
-    <td>15 sec</td>
-   </tr>
-   <tr>
-     <td>Classification of 1,000 articles</td>
-     <td>1.8 sec</td>
-     <td>1.3 sec</td>
-   </tr>
-</table>
+Task | On CPU | On GPU
+--- | --- | ---
+One-time Initialization | 30 sec | 15 sec
+Classification of 1,000 articles | 1.8 sec | 1.3 sec
 
 ## Architecture
 
