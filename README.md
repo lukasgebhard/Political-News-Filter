@@ -33,7 +33,7 @@ $ virtualenv --python=python3.6 venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
-5. Verify the installation was successfull. If so, the following command terminates with exit code 0:
+5. Verify the installation was successful. If so, the following command terminates with exit code 0:
 ```bash
 $ python3 political-news-filter.py
 ```
@@ -94,7 +94,7 @@ I created a labeled set of 0.57M news articles, selected from:
 - [The HuffPost dataset](https://www.kaggle.com/rmisra/news-category-dataset)
 - [The BBC dataset](http://mlg.ucd.ie/datasets/bbc.html)
 
-After fitting the classifier on 87.5 % of the articles, testing it on the remaining 12.5 % of articles yields:
+After fitting the classifier on 87.5 % of the articles, testing it on the remaining 12.5 % yields:
 
 - F1 = 94.4
 - Precision = 95.2
