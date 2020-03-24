@@ -1,48 +1,51 @@
 # Political News Filter
 
-*Political News Filter* classifies English news articles based on whether they cover policy topics. It uses a broad characterization of politics: Politics is about "who gets what, when, and how" [(Lasswell, 1936)](https://www.cambridge.org/core/journals/american-political-science-review/article/politics-who-gets-what-when-how-by-harold-d-lasswell-new-york-whittlesey-house-1936-pp-ix-264/90C407BEDE6963B3D2C84FF79C695E1E). As a result, *Political News Filter* may consider business news or tech news as political, depending on actual contents.
+*Political News Filter* classifies English news articles based on whether they cover policy topics.
+
+It uses a broad characterization of politics: Politics is about "who gets what, when, and how" [(Lasswell, 1936)](https://www.cambridge.org/core/journals/american-political-science-review/article/politics-who-gets-what-when-how-by-harold-d-lasswell-new-york-whittlesey-house-1936-pp-ix-264/90C407BEDE6963B3D2C84FF79C695E1E). As a result, *Political News Filter* may consider business news or tech news as political, depending on actual contents.
 
 ## Requirements
 
-- [Git LFS](https://git-lfs.github.com/)
+- Git LFS
 - Python 3.6+
 - Pandas 0.24.1+
 - NumPy 1.18.1+
 - Keras 2.3.1+
 - TensorFlow 2.1.0+
 
+*Political News Filter* supports both CPU and GPU processing. The latter is faster but requires a CUDA-capable graphics card and the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit).
+
 ## Setup
 
 1. Install [Git LFS](https://git-lfs.github.com/) and set it up for your user account.
-
 2. Clone this repository.
 ```bash
 $ git clone https://github.com/lukasgebhard/Political-News-Filter.git
 $ cd Political-News-Filter
 ```
-3. Extract `lfs_data.zip` into the repository. Its inflated size is 1.1 GB.
+3. Extract `lfs_data.zip` into the repository. (Its inflated size is 1.1 GB.)
 ```bash
 $ unzip lfs_data.zip
 ```
-4. Install Python dependencies. For example, create a virtualenv:
+4. Install Python dependencies. For example, create a virtual environment:
 ```bash
 $ virtualenv --python=python3.6 venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
-5. Check the installation. The following command should terminate with exit code 0:
+5. Verify the installation was successfull. If so, the following command terminates with exit code 0:
 ```bash
 $ python3 political-news-filter.py
 ```
 
-## Usage
+## Usage Demo
 
 Start a Python session:
 ```bash
 $ python3
 ```
 
-Create some dummy articles:
+Create exemplary articles:
 ```python
 >>> political_article = '''White House declares war against terror. The US government officially announced a ''' \
                         '''large-scale military offensive against terrorism. Today, the Senate agreed to spend an ''' \
@@ -77,21 +80,19 @@ True
 True
 ```
 
-For more details, please read the docstrings.
+Please read the docstrings for further information.
 
 ## Architecture
 
 The classifier is based on a [model by Heng Zheng](https://www.kaggle.com/hengzheng/news-category-classifier-val-acc-0-65) submitted to Kaggle under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license. It is a convolutional neural network with a 100-dimensional [GloVe](https://www.aclweb.org/anthology/D14-1162/) embedding layer, three convolutional layers, each one followed by a ReLu layer and a pooling layer, and finally a softmax output layer. During training, a cross-entropy loss function is minimized using dropout regularization.
 
-## Data
+## Model Fitting
 
 I created a labeled set of 0.57M news articles, selected from:
 
 - [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/)
 - [The HuffPost dataset](https://www.kaggle.com/rmisra/news-category-dataset)
 - [The BBC dataset](http://mlg.ucd.ie/datasets/bbc.html)
-
-## Evaluation
 
 After fitting the classifier on 87.5 % of the articles, testing it on the remaining 12.5 % of articles yields:
 
