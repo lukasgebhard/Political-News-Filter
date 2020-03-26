@@ -6,7 +6,6 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 ## Requirements
 
-- Git LFS
 - Python 3.6+
 - Pandas 0.24.1+
 - NumPy 1.18.1+
@@ -17,31 +16,27 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 ## Setup
 
-1. Install [Git LFS](https://git-lfs.github.com/) and set it up for your user account.
-2. Clone this repository.
-```bash
+1. Clone this repository.
+```
 $ git clone https://github.com/lukasgebhard/Political-News-Filter.git
 $ cd Political-News-Filter
 ```
-3. Extract `lfs_data.zip` into the repository. (Its inflated size is 1.1 GB.)
-```bash
-$ unzip lfs_data.zip
+2. Download and extract [pon_classifier.zip](https://drive.google.com/open?id=1kmFr3WYOa7bSQELvpMcY77wH4gzLe9cJ) into the repository folder.
+3. Install Python dependencies. For example, create a virtual environment:
 ```
-4. Install Python dependencies. For example, create a virtual environment:
-```bash
 $ virtualenv --python=python3.6 venv
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
-5. Verify the installation was successful. If so, the following command terminates with exit code 0:
-```bash
+4. Verify the installation was successful. If so, the following command terminates with exit code 0:
+```
 $ python3 political-news-filter.py
 ```
 
 ## Usage Demo
 
 Start a Python session:
-```bash
+```
 $ python3
 ```
 
