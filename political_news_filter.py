@@ -5,7 +5,7 @@ import doctest
 import pandas as pd
 import numpy as np
 from keras.engine.saving import load_model
-from keras.utils import np_utils, multi_gpu_model
+from keras.utils import np_utils
 from keras_preprocessing.text import tokenizer_from_json
 from keras_preprocessing import sequence
 
@@ -61,11 +61,11 @@ class Classifier:
         self._load()
 
     def _load(self):
-        with open('./tokenizer.json', 'r') as tokenizer_file:
+        with open('./pon_classifier/tokenizer.json', 'r') as tokenizer_file:
             json = tokenizer_file.read()
 
         self._tokenizer = tokenizer_from_json(json)
-        self._model = load_model('./model.h5')
+        self._model = load_model('./pon_classifier/model.h5')
 
     @staticmethod
     def _as_array(tokens):
@@ -123,5 +123,4 @@ class EstimationSet:
 
 
 if __name__ == '__main__':
-    doctest.testmod()
-    print('Hooray! Political News Filter is properly installed and ready to use.')
+    doctest.testmod(raise_on_error=True)

@@ -16,31 +16,40 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 ## Setup
 
-1. Clone this repository.
-```
-$ git clone https://github.com/lukasgebhard/Political-News-Filter.git
-$ cd Political-News-Filter
-```
-2. Download and extract [pon_classifier.zip](https://drive.google.com/open?id=1kmFr3WYOa7bSQELvpMcY77wH4gzLe9cJ) into the repository folder.
-3. Install Python dependencies. For example, create a virtual environment:
-```
-$ virtualenv --python=python3.6 venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
-```
-4. Verify the installation was successful. If so, the following command terminates with exit code 0:
-```
-$ python3 political-news-filter.py
-```
+1. Clone this repository:
+
+    ```
+    $ git clone https://github.com/lukasgebhard/Political-News-Filter.git
+    $ cd Political-News-Filter
+    ```
+
+1. Download and extract [pon_classifier.zip](https://drive.google.com/open?id=1kmFr3WYOa7bSQELvpMcY77wH4gzLe9cJ) into the repository folder. Its inflated size is 1.2 GB.
+
+1. Install Python dependencies. For example, create a virtual environment:
+
+    ```
+    $ virtualenv --python=python3.6 venv
+    $ source venv/bin/activate
+    $ pip install -r requirements.txt
+    ```
+
+1. Verify the installation was successful:
+
+    ```
+    $ ./check_installation.sh
+    Hooray! Political News Filter is properly installed and ready to use.
+    ```
 
 ## Usage Demo
 
 Start a Python session:
+
 ```
 $ python3
 ```
 
 Create exemplary articles:
+
 ```python
 >>> political_article = '''White House declares war against terror. The US government officially announced a ''' \
                         '''large-scale military offensive against terrorism. Today, the Senate agreed to spend an ''' \
@@ -58,6 +67,7 @@ Create exemplary articles:
 ```
 
 To filter a list of news articles, call `filter_news`:
+
 ```python
 >>> from political_news_filter import filter_news
 >>> political_article == filter_news([political_article, nonpolitical_article])[0]
@@ -65,6 +75,7 @@ True
 ```
 
 If you need more flexibility, you can directly call the underlying classifier:
+
 ```python
 >>> from political_news_filter import Classifier
 >>> classifier = Classifier()
