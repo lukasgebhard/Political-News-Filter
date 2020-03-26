@@ -18,7 +18,7 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 1. Clone this repository:
 
-    ```
+    ```bash
     $ git clone https://github.com/lukasgebhard/Political-News-Filter.git
     $ cd Political-News-Filter
     ```
@@ -27,7 +27,7 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 1. Install Python dependencies. For example, create a virtual environment:
 
-    ```
+    ```bash
     $ virtualenv --python=python3.6 venv
     $ source venv/bin/activate
     $ pip install -r requirements.txt
@@ -35,7 +35,7 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 1. Verify the installation was successful:
 
-    ```
+    ```bash
     $ ./check_installation.sh
     Hooray! Political News Filter is properly installed and ready to use.
     ```
@@ -44,7 +44,7 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 Start a Python session:
 
-```
+```bash
 $ python3
 ```
 
