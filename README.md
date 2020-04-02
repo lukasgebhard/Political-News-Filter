@@ -1,6 +1,6 @@
 # Political News Filter
 
-*Political News Filter* classifies English news articles based on whether they cover policy topics.
+*Political News Filter* classifies English news articles regarding whether they cover policy topics.
 
 It uses a broad characterization of politics: Politics is about "who gets what, when, and how" [(Lasswell, 1936)](https://www.cambridge.org/core/journals/american-political-science-review/article/politics-who-gets-what-when-how-by-harold-d-lasswell-new-york-whittlesey-house-1936-pp-ix-264/90C407BEDE6963B3D2C84FF79C695E1E). As a result, *Political News Filter* may consider business news or tech news as political, depending on actual contents.
 
@@ -105,12 +105,12 @@ The classifier is based on a [model by Heng Zheng](https://www.kaggle.com/hengzh
 
 I created a labeled set of 0.57M news articles, selected from:
 
-- [CC-News](https://commoncrawl.org/2016/10/news-dataset-available/) (extracted using [news-please](https://github.com/fhamborg/news-please))
+- [The CommonCrawl news archive](https://commoncrawl.org/2016/10/news-dataset-available/) (extracted using [news-please](https://github.com/fhamborg/news-please))
 - [The HuffPost dataset](https://www.kaggle.com/rmisra/news-category-dataset)
 - [The BBC dataset](http://mlg.ucd.ie/datasets/bbc.html)
 
 After fitting the classifier on 87.5 % of the articles, testing it on the remaining 12.5 % yields:
 
 - F1 = 94.4
-- Precision = 95.2
-- Recall = 91.8 
+- Precision = 95.6
+- Recall = 93.2
