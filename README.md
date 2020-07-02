@@ -114,3 +114,18 @@ After fitting the classifier on 87.5 % of the articles, testing it on the remain
 - F1 = 94.4
 - Precision = 95.6
 - Recall = 93.2
+
+## How to Cite
+
+If you use Political News Filter, please cite [our poster](https://dx.doi.org/10.1145/3383583.3398567):
+
+@InProceedings{POLUSA,
+  author     = {Gebhard, Lukas and Hamborg, Felix},
+  title      = {The POLUSA Dataset: 0.9M Political News Articles Balanced by Time and Outlet Popularity},
+  year       = {2020},
+  month      = {August},
+  booktitle  = {Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020 (JCDL '20)},
+  venue      = {Virtual event, China},
+  publisher  = {Association for Computing Machinery},
+  doi        = {10.1145/3383583.3398567}
+}
