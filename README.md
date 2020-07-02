@@ -119,7 +119,7 @@ After fitting the classifier on 87.5 % of the articles, testing it on the remain
 
 If you use Political News Filter, please cite [our poster](https://dx.doi.org/10.1145/3383583.3398567):
 
-``
+```
 @InProceedings{POLUSA,
   author     = {Gebhard, Lukas and Hamborg, Felix},
   title      = {The POLUSA Dataset: 0.9M Political News Articles Balanced by Time and Outlet Popularity},
