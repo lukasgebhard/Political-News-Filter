@@ -6,11 +6,11 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
 
 ## Requirements
 
-- Python 3.6+
-- Pandas 0.24.1+
-- NumPy 1.18.1+
-- Keras 2.3.1+
-- TensorFlow 2.1.0+
+- Python 3.6
+- Pandas 0.24.1
+- NumPy 1.18.1
+- Keras 2.3.1
+- TensorFlow 2.1.0
 
 *Political News Filter* supports both CPU and GPU processing. The latter is faster but requires a CUDA-capable graphics card and the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit).
 
