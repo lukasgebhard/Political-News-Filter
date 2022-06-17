@@ -4,12 +4,11 @@ import doctest
 
 import pandas as pd
 import numpy as np
-from keras.engine.saving import load_model
+from keras.engine.saving import save
 from keras.utils import np_utils
 from keras_preprocessing.text import tokenizer_from_json
 from keras_preprocessing import sequence
-
-
+load_model = save.load_model 
 _POLITICAL_ARTICLE = '''White House declares war against terror. The US government officially announced a ''' \
                      '''large-scale military offensive against terrorism. Today, the Senate agreed to spend an ''' \
                      '''additional 300 billion dollars on the advancement of combat drones to be used against ''' \
