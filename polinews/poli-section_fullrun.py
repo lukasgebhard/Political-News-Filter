@@ -2,11 +2,15 @@
 Full run on scmp to generate mask for whether news is political or not. 
 
 Run using newssent environment. 
+
+Warning: contains old file locations: you'll need to change to uniform 
+"data/publication/publication_full.csv" format for file_loc
 """
+from logging import root
 import polinews
 import pandas as pd
 import time 
-
+import os
 
 def timeit(fn, *args, **kwargs):
     s = time.perf_counter()
@@ -49,10 +53,11 @@ for year in range(2011, 2021):
 # %% 
 # NYT
 # DON'T RUN YET
-file_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\nyt\clean_main.csv"
+file_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\nyt\nyt_full.csv"
 save_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\nyt\polimask\pmask_.csv"
-text_col - "lead_paragraph"
-index_col = "_id"
+text_col - "text"
+index_col = "sourceurl"
+generate_poli_mask(file_loc, save_loc, text_col, index_col)
 
 # %% 
 # HKFP
@@ -64,17 +69,34 @@ generate_poli_mask(file_loc, save_loc, text_col, index_col)
 
 # %%
 # China daily
-text_col = "Body"
-index_col = "Index"
-file_loc = rf"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\chinadaily_full.csv"
-save_loc = fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\polimask\pmask_{year}.csv"
+text_col = "plainText"
+index_col = "id"
+file_loc = rf"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\chinadaily\chinaddaily_full.csv"
+save_loc = fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\chinadaily\polimask\pmask_.csv"
 generate_poli_mask(file_loc, save_loc, text_col, index_col)
 # %% 
 #  Global times
 file_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\globaltimes\ArticleItem\20211228_154428.csv"
 save_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\globaltimes\polimask\pmask_.csv"
-text_col = "plainText"
-index_col = "id"
+text_col = "Body"
+index_col = "Art_id"
 generate_poli_mask(file_loc, save_loc, text_col, index_col)
 
+# %% 
+
 # %%
+# SCMP polifilter consolidation
+# dfls = []
+# for year in range(2011, 2022):
+#     df = pd.read_csv(fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\scmp\polimask\pmask_{year}.csv")
+#     dfls.append(df)
+# maindf = pd.concat(dfls)
+# maindf.to_csv(fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\scmp\polimask\pmask_.csv")
+
+# %% section consolidation
+# dfls = []
+# for year in range(2011, 2022):
+#     df = pd.read_csv(fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\scmp\sections\sect_{year}.csv")
+#     dfls.append(df)
+# maindf = pd.concat(dfls)
+# maindf.to_csv(fr"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\scmp\sections\sections.csv")
