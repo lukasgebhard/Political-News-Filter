@@ -55,10 +55,11 @@ for year in range(2011, 2021):
 # DON'T RUN YET
 file_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\nyt\nyt_full.csv"
 save_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\nyt\polimask\pmask_.csv"
-text_col - "text"
+text_col = "text"
 index_col = "sourceurl"
 generate_poli_mask(file_loc, save_loc, text_col, index_col)
-
+import pandas as pd
+df = pd.read_csv(save_loc)
 # %% 
 # HKFP
 file_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\hkfp\allscrape_20211129_020006.csv"
@@ -66,7 +67,6 @@ save_loc = r"C:\Users\tlebr\OneDrive - pku.edu.cn\Thesis\data\hkfp\polimask\pmas
 text_col = "Body"
 index_col = "Art_id"
 generate_poli_mask(file_loc, save_loc, text_col, index_col)
-
 # %%
 # China daily
 text_col = "plainText"
