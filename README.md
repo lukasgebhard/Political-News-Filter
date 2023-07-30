@@ -23,7 +23,7 @@ It uses a broad characterization of politics: Politics is about "who gets what, 
     $ cd Political-News-Filter
     ```
 
-1. Download and extract [pon_classifier.zip](https://drive.google.com/open?id=1kmFr3WYOa7bSQELvpMcY77wH4gzLe9cJ) into the repository folder. Its inflated size is 1.2 GB.
+1. Download and extract [pon_classifier.zip](https://drive.google.com/file/d/1X5nVP4g8ygMf9-eb1qsCGB-kthkLvaPA/view?usp=sharing) into the repository folder. Its inflated size is 1.1 GB.
 
 1. Install Python dependencies. For example, create a virtual environment:
 
